@@ -24,22 +24,22 @@ const getImage = () => {
   }, []);
 
   return (
-    <div class="container">
-      <div class="blog-container">
-        <p className="blog-date">
-          {new Date(Date.now()).toLocaleDateString("en-US", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          })}
-        </p>
-        <h2 className="blog-title">{post.title.rendered}</h2>
-        <p
-          className="blog-excerpt"
-          dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-        />
-        <img src={featuredImage} class="mask" />
-      </div>
-    </div>
+<div className="container">
+  <div className="blog-container">
+    <img className='mask' src={featuredImage}  alt="Blog Post Image"/>
+    <h2 className="blog-title">{post.title.rendered}</h2>
+      <p className="blog-date">
+        {new Date(Date.now()).toLocaleDateString("en-US", {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                })}
+      </p>
+    <p className="blog-excerpt" 
+    dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+    />
+  </div>
+</div>
   );
 }
+
