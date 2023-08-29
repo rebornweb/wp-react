@@ -7,7 +7,7 @@ export default function App() {
 
   const fetchPosts = () => {
     axios
-      .get('http://university.rebornweb.co.nz/wp-json/wp/v2/posts')
+      .get('http://localhost:70/wp-json/wp/v2/posts') //For local use 'http://localhost:port/wp-json/wp/v2/posts'
       .then((res) => {
         setPosts(res.data);
         console.log(res.data); 
