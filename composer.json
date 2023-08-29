@@ -1,0 +1,12 @@
+{
+    "name": "rebornweb/wp-react",
+    "type": "project",
+    "require": {
+        "johnpbloch/wordpress": "^6.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "johnpbloch/wordpress-core-installer": true
+        }
+    }
+}

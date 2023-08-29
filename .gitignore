@@ -1,0 +1,15 @@
+/vendor/
+
+# Ignore WordPress core files and folders
+wp-admin/
+wp-includes/
+wp-config.php
+
+# Ignore Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignore theme and plugin specific directories (adjust as needed)
+wp-content/themes/*/node_modules/
+wp-content/plugins/*/node_modules/
