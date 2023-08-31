@@ -9,7 +9,7 @@ import Page from './components/page.jsx';
 export default function App() {
   const [posts, setPosts] = useState([]);
   const [pages, setPages] = useState([]);
-  const apiUrl = "http://tbnztest.rebornweb.co.nz/wp-json/wp/v2/";
+  const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
 
   const fetchPosts = () => {
     axios

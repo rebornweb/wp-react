@@ -5,11 +5,11 @@ import "../styles/navigation.css";
 
 function Navigation() {
   const [pages, setPages] = useState([]);
-  const apiurl = "http://tbnztest.rebornweb.co.nz/wp-json/wp/v2/pages";
+  const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
 
   useEffect(() => {
     // Fetch pages from WordPress API
-    fetch(apiurl)
+    fetch(`${apiUrl}pages`)
       .then((response) => response.json())
       .then((data) => setPages(data))
       .catch((error) => console.error("Error fetching pages:", error));
